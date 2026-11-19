@@ -2,5 +2,14 @@ name: Post welcome comment
 on:
   pull_request:
     types: [opened]
+  workflow_dispatch: 
 permissions:
   pull-requests: write
+
+jobs:
+  demo:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: jloscos/eShopOnWeb/.github/actions/dotnet-build@main
+        with:
+          project: ./
