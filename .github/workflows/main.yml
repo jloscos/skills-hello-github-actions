@@ -1,0 +1,10 @@
+name: test
+on: [workflow_dispatch]
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: jloscos/eShopOnWeb/.github/actions/dotnet-build@main
+        with:
+          project: ./
